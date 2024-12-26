@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Italiana } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const italiana = Italiana({
+  subsets: ["latin"], // Specify the subsets you need
+  weight: "400", // Specify the weight(s) needed (e.g., '400' for regular)
 });
 
 export const metadata: Metadata = {
@@ -24,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${italiana.className} antialiased background-image`}>
         {children}
       </body>
     </html>
