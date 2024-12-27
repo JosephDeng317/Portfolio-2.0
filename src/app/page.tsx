@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Socials from "./socials";
+import Panel from "./panel";
 
 export default function Home() {
   return (
@@ -16,13 +17,29 @@ export default function Home() {
           <h1 className="navbar-button transition-all duration-300">contact</h1>
         </div>
       </div>
-      <div className="row-span-6"></div>
-      <div className="row-span-2">
-        <div className="pl-20">
+      <div className="row-span-6">
+        <Panel />
+      </div>
+      <div className="row-span-2 grid grid-cols-4">
+        <div className="pl-20 col-span-2">
           <h1 className="text-8xl text-white">Joseph Deng</h1>
         </div>
-        <div></div>
-        <div></div>
+        <div className="flex justify-end pt-2">
+          <div>
+            <label
+              htmlFor="default-range"
+              className="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            ></label>
+            <input
+              id="default-range"
+              type="range"
+              value="0"
+              className="w-80 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+            ></input>
+          </div>
+        </div>
+
+        <Socials />
       </div>
     </div>
   );
