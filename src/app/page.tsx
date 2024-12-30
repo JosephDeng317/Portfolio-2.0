@@ -18,7 +18,7 @@ export default function Home() {
             <h1 className="navbar-button transition-all duration-300">
               projects
             </h1>
-            <h1 className="navbar-button transition-all duration-300">
+            <h1 className="navbar-button transition-all duration-200">
               contact
             </h1>
           </div>

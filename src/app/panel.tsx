@@ -13,7 +13,7 @@ export default function Panel() {
     >
       <div
         className={`absolute bg-black w-full h-full opacity-30 rounded-l-lg transition-all duration-300 ${
-          inputValue === 1 ? "left-1/3" : "left-0"
+          inputValue === 1 ? "left-1/3 ml-10" : "left-0"
         }`}
       >
         <div className="text-white">Hello {inputValue}</div>
