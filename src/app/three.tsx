@@ -5,12 +5,14 @@ import { useSlider } from "./context";
 export default function Three() {
   const { inputValue } = useSlider();
   return (
-    <div
-      className={`transition-all duration-300 bg-white ${
-        inputValue === 1 ? "col-span-2" : "col-span-2"
-      }`}
-    >
-      3D Model
+    <div className={`relative col-span-2 w-100`}>
+      <div
+        className={`absolute w-full h-full overflow-visible transition-all duration-200 bg-white -right-1/2 ${
+          inputValue === 1 ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        3D Model
+      </div>
     </div>
   );
 }
