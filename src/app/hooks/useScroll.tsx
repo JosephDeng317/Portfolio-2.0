@@ -1,40 +1,31 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { useSlider } from "../context";
 
-export default function useScrollAnimation(isLocked) {
-  // Use a ref to keep track of the timeout state
-  const { inputValue, setInputValue } = useSlider();
+export default function useScroll() {
   const COOLDOWN = 1000; // timeout in ms
   const timeoutRef = useRef(false);
 
+  const { handleScroll } = useSlider();
+
   useEffect(() => {
-    const handleScroll = (event) => {
-      if (timeoutRef.current || !isLocked) return;
-      if (event.deltaY < 0) {
-        // Scroll up - trigger previous animation
-        prevAnimation();
-      } else if (event.deltaY > 0) {
-        // Scroll down - trigger next animation
-        nextAnimation();
-      }
-
-      var threeElement = document.getElementById("threejs-container");
-      threeElement.scrollIntoView({behavior:"auto", block: "center", inline:"nearest"});
-      // Set the timeout flag to true to prevent multiple triggers
-      timeoutRef.current = true;
-
-      // Clear the timeout flag after a delay (e.g., 500ms)
-      setTimeout(() => {
-        timeoutRef.current = false;
-      }, COOLDOWN);
+    const onWheel = (event: WheelEvent) => {
+      if (timeoutRef.current) return;
+      handleScroll(event.deltaY);
     };
 
-    // Add event listener to the window for the `wheel` event
-    window.addEventListener("wheel", handleScroll);
+    // Set the timeout flag to true to prevent multiple triggers
+    timeoutRef.current = true;
 
-    // Clean up event listener on component unmount
+    // Clear the timeout flag after a delay (e.g., 500ms)
+    setTimeout(() => {
+      timeoutRef.current = false;
+    }, COOLDOWN);
+
+    window.addEventListener("wheel", onWheel);
     return () => {
-      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("wheel", onWheel);
     };
-  }, [prevAnimation, nextAnimation]);
+  }, [handleScroll]);
 }

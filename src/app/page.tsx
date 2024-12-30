@@ -1,10 +1,15 @@
+// "use client";
+
 import Socials from "./socials";
 import Panel from "./panel";
 import RangeSlider from "./slider";
 import { SliderProvider } from "./context";
 import Three from "./three";
+import useScroll from "./hooks/useScroll";
 
 export default function Home() {
+  // useScroll();
+
   return (
     <div className="grid grid-rows-9 gap-4 h-screen">
       <SliderProvider>
