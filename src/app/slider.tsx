@@ -9,7 +9,7 @@ function RangeSlider() {
 
   function handleSliderInput() {
     if (sliderRef.current) {
-      const value = parseInt(sliderRef.current.value, 10); // Ensure the value is a number
+      const value = parseFloat(sliderRef.current.value);
       setInputValue(value);
     }
   }
@@ -21,7 +21,6 @@ function RangeSlider() {
   return (
     <div className="flex justify-end pt-2">
       <div>
-        {inputValue}
         <input
           id="default-range"
           type="range"
@@ -30,6 +29,7 @@ function RangeSlider() {
           value={inputValue}
           min={1}
           max={5}
+          step={0.01}
           className="w-80 h-2 cursor-pointer accent-neutral-700 border-none bg-white"
         ></input>
       </div>
