@@ -10,13 +10,13 @@ export const usePanelPosition = () => {
   useEffect(() => {
     const handleScroll = (e: WheelEvent) => {
       e.preventDefault();
-      
       setScrolling(true);
-      const delta = e.deltaY * 0.01;
-      setInputValue((prev: number) => {
-        const newValue = Math.max(1, Math.min(5, prev + delta));
-        console.log(newValue);
-        return newValue;
+      
+      const delta = e.deltaY * 0.005; // Increased multiplier for faster scrolling
+      
+      setInputValue(current => {
+        const newValue = Math.max(0, Math.min(5, current + delta));
+        return Number(newValue.toFixed(2));
       });
       
       setTimeout(() => setScrolling(false), 150);

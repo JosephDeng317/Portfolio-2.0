@@ -26,11 +26,12 @@ export default function Panel() {
     }
   };
 
-  const translateX = `${-(progress - 1) * 20}%`;
+  // Calculate translation based on progress
+  const translateX = `calc(25vw + ${-(progress) * 20}%)`;
 
   return (
     <div
-      className="w-[600vh] h-full col-span-6 col-start-3 relative"
+      className="w-[600vh] h-full"
       style={{
         transform: `translateX(${translateX})`,
         transition: 'transform 0.3s ease-out'

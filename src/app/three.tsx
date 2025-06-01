@@ -88,7 +88,7 @@ export default function Three() {
       <div
         id="three-container"
         className={`absolute w-full h-full overflow-visible transition-all duration-200 -right-1/2 ${
-          inputValue === 1 ? "opacity-100" : "opacity-0"
+          inputValue < 0.5 ? "opacity-100" : "opacity-0"
         }`}
       ></div>
     </div>

@@ -19,7 +19,7 @@ function RangeSlider() {
   }, [sliderRef]);
 
   return (
-    <div className="flex justify-end pt-2">
+    <div className="flex justify-start pt-2">
       <div>
         <input
           id="default-range"
@@ -27,7 +27,7 @@ function RangeSlider() {
           ref={sliderRef} // Attach the ref to the input element
           onInput={handleSliderInput}
           value={inputValue}
-          min={1}
+          min={0}
           max={5}
           step={0.01}
           className="w-80 h-2 cursor-pointer accent-neutral-700 border-none bg-white"
