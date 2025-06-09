@@ -27,7 +27,7 @@ function RangeSlider() {
           ref={sliderRef} // Attach the ref to the input element
           onInput={handleSliderInput}
           value={inputValue}
-          min={0}
+          min={0.5}
           max={4}
           step={0.01}
           className="w-80 h-2 cursor-pointer accent-neutral-700 border-none bg-white"

@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className="row-span-1 grid grid-cols-8">
       <div className="p-5 col-span-2">
-        <button className="" onClick={() => setInputValue(0)}>
+        <button className="" onClick={() => setInputValue(0.5)}>
           <h1 className="text-5xl tight-spacing">JD</h1>
         </button>
       </div>
