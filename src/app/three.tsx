@@ -8,8 +8,8 @@ import { useEffect } from "react";
 export default function Three() {
   useEffect(() => {
     const container = document.getElementById("three-container");
-    const WIDTH = 400;
-    const HEIGHT = 500;
+    const WIDTH = 600;
+    const HEIGHT = 800;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, WIDTH / HEIGHT, 0.1, 1000);

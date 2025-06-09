@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Italiana, Alata } from "next/font/google";
+import { Geist, Geist_Mono, Italiana, Alata, Antic_Didone } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +18,11 @@ const italiana = Italiana({
 });
 
 const alata = Alata({
+  subsets: ["latin"], // Specify the subsets you need
+  weight: "400", // Specify the weight(s) needed (e.g., '400' for regular)
+});
+
+const antic = Antic_Didone({
   subsets: ["latin"], // Specify the subsets you need
   weight: "400", // Specify the weight(s) needed (e.g., '400' for regular)
 });

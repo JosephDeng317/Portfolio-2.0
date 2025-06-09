@@ -27,18 +27,32 @@ export default function Panel() {
   };
 
   // Calculate translation based on progress
-  const translateX = `calc(25vw + ${-(progress) * 20}%)`;
+  const translateX = `calc(50vw + ${-(progress) * 50}vw)`;
 
   return (
     <div
-      className="w-[600vh] h-full"
+      className="absolute inset-0 w-[200vw] h-full"
       style={{
         transform: `translateX(${translateX})`,
         transition: 'transform 0.3s ease-out'
       }}
     >
-      <div className="absolute bg-black w-full h-full opacity-30 rounded-l-lg">
-        <div className="text-white">{renderContent()}</div>
+      {/* Background layer with opacity */}
+      <div className="absolute inset-0 bg-black opacity-30 rounded-l-lg" />
+
+      <div className="absolute inset-0 w-full h-fullrounded-l-lg grid grid-cols-4 px-5 gap-5">
+        <div className="col-start-1">
+          <About />
+        </div>
+        <div className="col-start-2">
+          <Work />
+        </div>
+        <div className="col-start-3">
+          <Projects />
+        </div>
+        <div className="col-start-4">
+          <Contact />
+        </div>  
       </div>
     </div>
   );

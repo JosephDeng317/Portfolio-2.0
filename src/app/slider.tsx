@@ -28,7 +28,7 @@ function RangeSlider() {
           onInput={handleSliderInput}
           value={inputValue}
           min={0}
-          max={5}
+          max={4}
           step={0.01}
           className="w-80 h-2 cursor-pointer accent-neutral-700 border-none bg-white"
         ></input>

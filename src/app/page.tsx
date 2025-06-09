@@ -15,7 +15,7 @@ export default function Home() {
     <div className="grid grid-rows-9 gap-4 h-screen">
       <SliderProvider>
         <Navbar />
-        <div className="row-span-6 grid grid-cols-8 transition-[grid-template-columns] duration-500">
+        <div className="row-span-6 grid grid-cols-8 transition-[grid-template-columns] duration-500 relative overflow-hidden">
           <Three />
           <Panel />
         </div>

@@ -15,7 +15,7 @@ export const usePanelPosition = () => {
       const delta = e.deltaY * 0.005; // Increased multiplier for faster scrolling
       
       setInputValue(current => {
-        const newValue = Math.max(0, Math.min(5, current + delta));
+        const newValue = Math.max(0, Math.min(4, current + delta));
         return Number(newValue.toFixed(2));
       });
       
