@@ -3,7 +3,7 @@ export default function Socials() {
     <div className="flex justify-end">
       <div className="mr-20 pb-20 flex items-center gap-3">
         {/* CV BUTTON */}
-        <a href="Joseph_Deng_Resume_2_0.pdf" target="_blank">
+        <a href="Joseph_Deng_Resume_June_2025.pdf" target="_blank">
           <button className="p-2 pb-6 font-semibold text-white inline-flex items-center space-x-2 rounded alata text-5xl underline">
             cv
           </button>

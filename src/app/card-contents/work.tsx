@@ -6,19 +6,34 @@ export default function Work() {
       title: "Machine Learning Engineer",
       company: "Metrized Inc.",
       period: "Jan 2025 - Sep 2025",
-      description: "Led the development of internal tools using React and TypeScript, improving team productivity by 40%. Collaborated with cross-functional teams to implement cloud-based solutions and optimize AWS service integration."
+      points: 
+      [
+        "Utilized a cutting edge Image to 3D AI to generate high fidelity models of furniture, helping clients save up to $5000 per unit of shipping and scanning costs.",
+        "Boosted YOLO object detection speed by 200% by conducting thorough benchmarks and implementing TensorRT.",
+        "Spearheaded the transformation of a full-stack web app into a distributable desktop app with Electron, rewrote and packaged python backend to use dynamic ports, and bootstrapped large modules to optimize app size",
+        "Designed, implemented, and deployed a product landing page from scratch using Docker containers to ensure migratability, and Cloudflare tunnels to link a local port to a live domain"
+      ]
     },
     {
       title: "Full Stack Developer",
       company: "CSToolkit Inc.",
       period: "May 2024 - Jun 2024",
-      description: "Developed and maintained data visualization tools for quantum physics research. Built responsive web applications using Next.js and D3.js, enabling researchers to analyze complex datasets efficiently."
+      points: 
+      [
+        "Executed dynamic API calls to Contentful using Flask to add pagination, tagging, and a search function to the company’s production blog page.",
+        "Engaged in a multi-stage build and review process with a professional UX designer, and reskinned the website to use a responsive, mobile-first layout to improve user experience on small screen sizes"
+      ]
     },
     {
       title: "Web Developer",
       company: "UBC BIOMOD",
       period: "Oct 2024 - Present",
-      description: "Created intuitive user interfaces for blockchain applications using React and Web3.js. Implemented wallet integration and smart contract interactions, enhancing user engagement with decentralized applications."
+      points: 
+      [
+        "Worked in a team of four to ship a responsive, competition-ready website in less than 3 weeks using Astro.js",
+        "Finalized the production site by reviewing several pull requests , resolving code conflicts, and fixing critical bugs",
+        "Constructed an eye-catching home page featuring a controllable 3D model of the team’s microbiology project using Three.js, Tailwind, and React"
+      ]
     },
   ];
 
@@ -36,7 +51,13 @@ export default function Work() {
             <h2 className='text-2xl font-semibold mb-1'>{exp.title}</h2>
             <h3 className='text-xl text-gray-300 mb-2'>{exp.company}</h3>
             <p className='text-md text-gray-400 mb-4 antic'>{exp.period}</p>
-            <p className='text-gray-300 text-base leading-relaxed antic'>{exp.description}</p>
+            <ul>
+              {exp.points.map(point => (
+                <li key={point} className='text-gray-300 text-base leading-relaxed mb-2'>
+                  - {point}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
