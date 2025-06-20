@@ -11,27 +11,12 @@ import Contact from "./card-contents/contact";
 export default function Panel() {
   const { currentSection, progress } = usePanelPosition();
 
-  const renderContent = () => {
-    switch (currentSection) {
-      case 2:
-        return <About />;
-      case 3:
-        return <Work />;
-      case 4:
-        return <Projects />;
-      case 5:
-        return <Contact />;
-      default:
-        return <div className="text-white">Scroll to Proceed</div>;
-    }
-  };
-
   // Calculate translation based on progress
   const translateX = `calc(100vw + ${-(progress) * 100}vw)`;
 
   return (
     <div
-      className="absolute inset-0 w-[400vw] h-full"
+      className="absolute inset-0 w-[500vw] h-full"
       style={{
         transform: `translateX(${translateX})`,
         transition: 'transform 0.3s ease-out'
@@ -41,16 +26,16 @@ export default function Panel() {
       <div className="absolute inset-0 bg-black opacity-30 rounded-l-lg" />
 
       <div className="absolute inset-0 w-full h-fullrounded-l-lg grid grid-cols-4 px-5 gap-5">
-        <div className="col-start-1">
+        <div className="col-start-1 w-[100vw]">
           <About />
         </div>
-        <div className="col-start-2">
+        <div className="col-start-2 col-span-2">
           <Work />
         </div>
-        <div className="col-start-3">
+        <div className="col-start-4">
           <Projects />
         </div>
-        <div className="col-start-4">
+        <div className="col-start-5">
           <Contact />
         </div>  
       </div>

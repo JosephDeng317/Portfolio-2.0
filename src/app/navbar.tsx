@@ -23,12 +23,12 @@ export default function Navbar() {
             work
           </h1>
         </button>
-        <button className="" onClick={() => setInputValue(3)}>
+        <button className="" onClick={() => setInputValue(4)}>
           <h1 className="navbar-button transition-all duration-300 pb-5">
             projects
           </h1>
         </button>
-        <button className="" onClick={() => setInputValue(4)}>
+        <button className="" onClick={() => setInputValue(5)}>
           <h1 className="navbar-button transition-all duration-200 pb-5">
             contact
           </h1>

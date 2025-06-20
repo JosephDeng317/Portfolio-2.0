@@ -38,9 +38,9 @@ export default function Work() {
   ];
 
   return (
-    <div className="text-gray-100 opacity-100 mt-10 mx-5">
-      <h1 className='text-7xl mb-10'>my experiences...</h1>
-      <div className='grid grid-cols-3 gap-6'>
+    <div className="text-gray-100 opacity-100 mt-5 mx-5 w-full">
+      <h1 className='text-6xl mb-5 w-full'>my experiences...</h1>
+      <div className='grid grid-cols-3 gap-6 w-full'>
         {experiences.map((exp, index) => (
           <div 
             key={index} 
@@ -48,12 +48,11 @@ export default function Work() {
                      border border-gray-500/20 hover:border-gray-400/30 
                      transition-all duration-300 hover:scale-[1.02]'
           >
-            <h2 className='text-2xl font-semibold mb-1'>{exp.title}</h2>
-            <h3 className='text-xl text-gray-300 mb-2'>{exp.company}</h3>
-            <p className='text-md text-gray-400 mb-4 antic'>{exp.period}</p>
+            <h2 className='text-xl font-semibold'>{exp.title} @ {exp.company}</h2>
+            <p className='text-md text-gray-400 mb-2 antic'>{exp.period}</p>
             <ul>
               {exp.points.map(point => (
-                <li key={point} className='text-gray-300 text-base leading-relaxed mb-2'>
+                <li key={point} className='text-gray-300 text-base leading-relaxed'>
                   - {point}
                 </li>
               ))}
