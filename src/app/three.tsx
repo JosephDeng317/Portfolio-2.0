@@ -8,13 +8,20 @@ import { useEffect } from "react";
 export default function Three() {
   useEffect(() => {
     const container = document.getElementById("three-container");
-    const WIDTH = 600;
-    const HEIGHT = 800;
+    if (!container) return;
+
+    // Set renderer size to match container
+    const getSize = () => ({
+      width: container.clientWidth,
+      height: container.clientHeight,
+    });
+
+    const { width, height } = getSize();
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, WIDTH / HEIGHT, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(WIDTH, HEIGHT);
+    renderer.setSize(width, height);
     container?.appendChild(renderer.domElement);
 
     const loader = new GLTFLoader();
@@ -70,7 +77,7 @@ export default function Three() {
     window.addEventListener("resize", () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(WIDTH, HEIGHT);
+      renderer.setSize(width, height);
     });
 
     scene.add(model);
