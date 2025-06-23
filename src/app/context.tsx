@@ -37,7 +37,7 @@ export const SliderProvider = ({ children }: { children: ReactNode }) => {
   function increase() {
     if (sliderRef.current) {
       const value = parseInt(sliderRef.current.value, 10); // Ensure the value is a number
-      if (value < 5) {
+      if (value < 6) {
         setInputValue(value + 1);
       }
     }
