@@ -19,7 +19,7 @@ function RangeSlider() {
   }, [sliderRef]);
 
   return (
-    <div className="flex justify-start pt-2">
+    <div className="hidden lg:flex justify-start pt-2">
       <div>
         <input
           id="default-range"

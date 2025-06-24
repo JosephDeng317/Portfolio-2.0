@@ -16,7 +16,7 @@ export default function Panel() {
 
   return (
     <div
-      className="absolute inset-0 w-[500vw] h-full"
+      className="absolute inset-0 lg:w-[500vw] h-full"
       style={{
         transform: `translateX(${translateX})`,
         transition: "transform 0.3s ease-out",
@@ -25,7 +25,7 @@ export default function Panel() {
       {/* Background layer with opacity */}
       <div className="absolute inset-0 bg-black opacity-30 rounded-l-lg" />
 
-      <div className="absolute inset-0 w-full h-full rounded-l-lg grid grid-cols-5 px-5 gap-5">
+      <div className="absolute inset-0 w-full h-full rounded-l-lg flex lg:grid lg:grid-cols-5 px-5 gap-5">
         <div className="col-start-1 w-[100vw]">
           <About />
         </div>

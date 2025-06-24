@@ -6,13 +6,13 @@ export default function Navbar() {
   const { inputValue, setInputValue } = useSlider();
 
   return (
-    <div className="row-span-1 grid grid-cols-8">
+    <div className="grid row-span-1 grid-cols-8">
       <div className="p-5 col-span-2">
         <button className="" onClick={() => setInputValue(0.5)}>
           <h1 className="text-5xl tight-spacing">JD</h1>
         </button>
       </div>
-      <div className="flex pt-8 gap-10 text-4xl text-white">
+      <div className="hidden lg:flex pt-8 gap-10 text-4xl text-white">
         <button className="" onClick={() => setInputValue(1)}>
           <h1 className="navbar-button transition-all duration-300 pb-5">
             about

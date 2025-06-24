@@ -92,7 +92,7 @@ export default function Three() {
 
   const { inputValue } = useSlider();
   return (
-    <div className={`fixed top-0 h-[100vh] w-1/2 overflow-visible -z-10`}>
+    <div className={`fixed top-0 h-[100vh] w-[50vw] overflow-visible -z-10`}>
       <div
         id="three-container"
         className={`absolute w-full h-full overflow-visible transition-all duration-200 ${
@@ -100,7 +100,7 @@ export default function Three() {
         }`}
       ></div>
       <img
-        className={`absolute bottom-0 right-0 ${
+        className={`absolute bottom-[100] right-10 ${
           inputValue <= 0.5 ? "opacity-100" : "opacity-0"
         }`}
         src="imadethisinblender2.png"
