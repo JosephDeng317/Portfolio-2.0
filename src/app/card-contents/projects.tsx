@@ -34,7 +34,7 @@ export default function Projects() {
   return (
     <div className="text-gray-200 opacity-100 mt-5 mx-5">
       <h1 className='text-6xl mb-5'>my projects...</h1>
-      <div className='flex gap-6'>
+      <div className='flex flex-col lg:flex-row gap-6'>
         {projects.map((project, index) => (
           <div 
             key={index} 

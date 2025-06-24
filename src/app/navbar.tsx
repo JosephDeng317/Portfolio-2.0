@@ -6,7 +6,7 @@ export default function Navbar() {
   const { inputValue, setInputValue } = useSlider();
 
   return (
-    <div className="grid row-span-1 grid-cols-8">
+    <div className="h-[10vh] grid grid-cols-8 lg:row-span-1 lg:h-auto">
       <div className="p-5 col-span-2">
         <button className="" onClick={() => setInputValue(0.5)}>
           <h1 className="text-5xl tight-spacing">JD</h1>

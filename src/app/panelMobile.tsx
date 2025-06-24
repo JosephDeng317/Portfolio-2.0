@@ -10,21 +10,20 @@ import Contact from "./card-contents/contact";
 
 export default function PanelMobile() {
   return (
-    <div className="h-full">
+    <div className="h-full w-full relative">
       {/* Background layer with opacity */}
-      <div className="bg-black opacity-30 rounded-l-lg" />
-
-      <div className="w-full h-full rounded-l-lg flex px-5 gap-5">
-        <div className="">
+      <div className="absolute inset-0 bg-black opacity-30 rounded-lg m-5" />
+      <div className="h-full rounded-l-lg flex flex-col gap-5 relative z-10 m-5">
+        <div className="mt-5">
           <About />
         </div>
-        <div className="">
+        <div className="mt-5">
           <Work />
         </div>
-        <div className="">
+        <div className="mt-5">
           <Projects />
         </div>
-        <div className="">
+        <div className="mt-5">
           <Contact />
         </div>
       </div>

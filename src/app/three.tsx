@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useSlider } from "./context";
 import { useEffect } from "react";
 
@@ -20,7 +20,7 @@ export default function Three() {
     const { width, height } = getSize();
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     container?.appendChild(renderer.domElement);
@@ -45,7 +45,7 @@ export default function Three() {
 
     // loader.load("/Guitar.glb");
 
-    camera.position.z = 9.5;
+    camera.position.z = 18.5;
     // camera.up.set(0, -1, 0);
 
     const ambientLight = new THREE.AmbientLight(0x404040, 1);
@@ -92,21 +92,28 @@ export default function Three() {
 
   const { inputValue } = useSlider();
   return (
-    <div className={`fixed top-0 h-[100vh] w-[50vw] overflow-visible -z-10`}>
+    <div className={`absolute h-full w-full lg:fixed lg:top-0 lg:h-[100vh] lg:w-[50vw] overflow-visible -z-10`}>
       <div
         id="three-container"
         className={`absolute w-full h-full overflow-visible transition-all duration-200 ${
-          inputValue <= 0.5 ? "opacity-100" : "opacity-0"
+          inputValue <= 0.5 ? "opacity-100" : "opacity-100 lg:opacity-0"
         }`}
       ></div>
       <img
-        className={`absolute bottom-[100] right-10 ${
-          inputValue <= 0.5 ? "opacity-100" : "opacity-0"
+        className={`hidden lg:block absolute bottom-[130] right-10 ${
+          inputValue <= 0.5 ? "opacity-100" : ":opacity-0"
         }`}
         src="imadethisinblender2.png"
         alt="imadethisinblender"
         width="300"
         height="200"
+      />
+      <img
+        className="block lg:hidden absolute bottom-0 right-10"
+        src="imadethisinblender2.png"
+        alt="imadethisinblender"
+        width="240"
+        height="160"
       />
     </div>
   );

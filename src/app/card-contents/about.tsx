@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="text-gray-200 opacity-100 mt-5 mx-5">
       <h1 className='text-6xl'>hello...</h1>
-      <div className='mt-5 mb-5 w-1/2 pr-10'>
+      <div className='mt-5 mb-5 lg:w-1/2 pr-10'>
         <p className='opacity-90 text-lg antic'>
           Nice to meet you! I'm Joseph, a passionate fullstack developer with more than 6 years 
           of programming experience in various languages. I began my journey learning the fundementals of Python and Java in my 

@@ -27,6 +27,13 @@ body {
   background-size: cover; /* Adjust the size of the background */
 }
 
+.background-image-mobile {
+  background-image: url('../../public/gradient-background_upscaled_w_noise.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .name {
   color: white;
   font-size: 96px;

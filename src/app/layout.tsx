@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${italiana.className} antialiased background-image`}>
+      <body className={`${italiana.className} antialiased background-image-mobile lg:background-image`}>
         {children}
       </body>
     </html>

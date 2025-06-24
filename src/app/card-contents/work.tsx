@@ -40,7 +40,7 @@ export default function Work() {
   return (
     <div className="text-gray-100 opacity-100 mt-5 mx-5 w-full pr-10">
       <h1 className='text-6xl mb-5 w-full'>my experiences...</h1>
-      <div className='grid grid-cols-3 gap-6 w-full'>
+      <div className='flex flex-col lg:grid lg:grid-cols-3 gap-6 w-full'>
         {experiences.map((exp, index) => (
           <div 
             key={index} 
