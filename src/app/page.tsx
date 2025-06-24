@@ -15,12 +15,12 @@ export default function Home() {
     <div className="grid grid-rows-9 gap-4 h-screen">
       <SliderProvider>
         <Navbar />
-        <div className="row-span-6 grid grid-cols-8 transition-[grid-template-columns] duration-500 relative overflow-hidden">
+        <div className="row-span-6 grid grid-cols-8 transition-[grid-template-columns] duration-500 relative">
           <Three />
           <Panel />
         </div>
         <div className="row-span-2 grid grid-cols-4">
-          <div className="pl-20 col-span-2">
+          <div className="flex pl-20 col-span-2 justify-between">
             <h1 className="text-8xl text-white">Joseph Deng</h1>
           </div>
           <RangeSlider />

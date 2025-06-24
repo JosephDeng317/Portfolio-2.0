@@ -14,6 +14,7 @@ export default function Three() {
     const getSize = () => ({
       width: container.clientWidth,
       height: container.clientHeight,
+      // height: window.innerHeight,
     });
 
     const { width, height } = getSize();
@@ -29,7 +30,7 @@ export default function Three() {
     let model: THREE.Object3D | undefined; // Declare the variable to store the model
 
     loader.load(
-      "/donut.glb", // Path to the .glb file
+      "/cyberbike_lower_poly.glb", // Path to the .glb file
       (gltf: GLTF) => {
         model = gltf.scene; // Assign the loaded scene to the `model` variable
         scene.add(model); // Add the model to the scene
@@ -44,7 +45,7 @@ export default function Three() {
 
     // loader.load("/Guitar.glb");
 
-    camera.position.z = 0.17;
+    camera.position.z = 9.5;
     // camera.up.set(0, -1, 0);
 
     const ambientLight = new THREE.AmbientLight(0x404040, 1);
@@ -62,8 +63,8 @@ export default function Three() {
       mouseY = -(event.clientY / window.innerWidth) * 2;
 
       if (model) {
-        model.rotation.y = (mouseX - Math.PI / 1.5) * Math.PI * 0.8;
-        model.rotation.x = (mouseY - Math.PI / 1.5) * Math.PI * 0.8;
+        model.rotation.y = (mouseX - Math.PI) * Math.PI;
+        model.rotation.x = (mouseY - Math.PI / 2) * Math.PI;
       }
     });
 
@@ -91,13 +92,22 @@ export default function Three() {
 
   const { inputValue } = useSlider();
   return (
-    <div className={`relative col-span-2 w-100`}>
+    <div className={`fixed top-0 h-[100vh] w-1/2 overflow-visible -z-10`}>
       <div
         id="three-container"
-        className={`absolute w-full h-full overflow-visible transition-all duration-200 -right-1/2 ${
+        className={`absolute w-full h-full overflow-visible transition-all duration-200 ${
           inputValue <= 0.5 ? "opacity-100" : "opacity-0"
         }`}
       ></div>
+      <img
+        className={`absolute bottom-0 right-0 ${
+          inputValue <= 0.5 ? "opacity-100" : "opacity-0"
+        }`}
+        src="imadethisinblender2.png"
+        alt="imadethisinblender"
+        width="300"
+        height="200"
+      />
     </div>
   );
 }

@@ -12,14 +12,14 @@ export default function Panel() {
   const { currentSection, progress } = usePanelPosition();
 
   // Calculate translation based on progress
-  const translateX = `calc(100vw + ${-(progress) * 100}vw)`;
+  const translateX = `calc(100vw + ${-progress * 100}vw)`;
 
   return (
     <div
       className="absolute inset-0 w-[500vw] h-full"
       style={{
         transform: `translateX(${translateX})`,
-        transition: 'transform 0.3s ease-out'
+        transition: "transform 0.3s ease-out",
       }}
     >
       {/* Background layer with opacity */}
@@ -37,7 +37,7 @@ export default function Panel() {
         </div>
         <div className="col-start-5">
           <Contact />
-        </div>  
+        </div>
       </div>
     </div>
   );
