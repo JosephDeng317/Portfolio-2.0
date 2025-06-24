@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Italiana, Alata, Antic_Didone } from "next/font/google";
+import { Italiana, Alata, Antic_Didone } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const italiana = Italiana({
   subsets: ["latin"], // Specify the subsets you need
@@ -42,6 +32,7 @@ export default function RootLayout({
       <body className={`${italiana.className} antialiased background-image-mobile lg:background-image`}>
         {children}
       </body>
+      <div className={`${alata.className} ${antic.className}`}></div>
     </html>
   );
 }

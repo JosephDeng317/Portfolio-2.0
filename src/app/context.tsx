@@ -1,21 +1,19 @@
 "use client";
 
 import React, {
-  createContext,
   useContext,
   useState,
   useEffect,
   useRef,
   ReactNode,
-  useCallback,
 } from "react";
 
-type SliderContextType = {
-  inputValue: number;
-  setInputValue: (value: number) => void;
-};
+type SetInputValue = React.Dispatch<React.SetStateAction<number>>;
 
-const SliderContext = createContext<SliderContextType | undefined>(undefined);
+const SliderContext = React.createContext<{
+  inputValue: number;
+  setInputValue: SetInputValue;
+}>({ inputValue: 1, setInputValue: () => {} });
 
 export const SliderProvider = ({ children }: { children: ReactNode }) => {
   const [inputValue, setInputValue] = useState(0);

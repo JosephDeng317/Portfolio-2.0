@@ -5,8 +5,8 @@ import { useSlider } from "../context";
 
 export default function useScroll() {
   // Use a ref to keep track of the timeout state
-  const { inputValue, setInputValue } = useSlider();
-  const MAX = 5;
+  const { setInputValue } = useSlider();
+  const MAX = 6;
   const MIN = 1;
   const COOLDOWN = 1000; // timeout in ms
   const timeoutRef = useRef(false);
@@ -15,7 +15,7 @@ export default function useScroll() {
   function decrease() {
     if (sliderRef.current) {
       const value = parseInt(sliderRef.current.value, 10); // Ensure the value is a number
-      if (value > 1) {
+      if (value > MIN) {
         setInputValue(value - 1);
       }
     }
@@ -24,7 +24,7 @@ export default function useScroll() {
   function increase() {
     if (sliderRef.current) {
       const value = parseInt(sliderRef.current.value, 10); // Ensure the value is a number
-      if (value < 6) {
+      if (value < MAX) {
         setInputValue(value + 1);
       }
     }

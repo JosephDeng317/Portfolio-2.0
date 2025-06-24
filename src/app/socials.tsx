@@ -4,7 +4,7 @@ export default function Socials() {
       <div className="ml-3 lg:mr-20 lg:pb-20 flex items-center gap-3">
         {/* CV BUTTON */}
         <a href="Joseph_Deng_Resume_June_2025.pdf" target="_blank">
-          <button className="p-2 pb-6 font-semibold text-white inline-flex items-center space-x-2 rounded alata text-4xl lg:text-5xl underline">
+          <button className="p-2 pb-6 font-semibold text-white inline-flex items-center space-x-2 rounded alata text-4xl lg:text-5xl underline navbar-button transition-all duration-300">
             cv
           </button>
         </a>
@@ -16,7 +16,7 @@ export default function Socials() {
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               role="img"
-              className="w-7 lg:w-10"
+              className="w-7 lg:w-10 navbar-button transition-all duration-300"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
@@ -37,7 +37,7 @@ export default function Socials() {
         >
           <button className="p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
             <svg
-              className="w-7 lg:w-10 fill-current"
+              className="w-7 lg:w-10 fill-current navbar-button transition-all duration-300"
               role="img"
               viewBox="0 0 256 256"
               xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export default function Socials() {
         >
           <button className="p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
             <svg
-              className="w-7 lg:w-10fill-current"
+              className="w-7 lg:w-10 fill-current navbar-button transition-all duration-300"
               viewBox="0 0 48 48"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

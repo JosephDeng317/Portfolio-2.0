@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { useSlider } from "./context";
-import { usePanelPosition } from "./hooks/usePanelPosition";
 import About from "./card-contents/about";
 import Work from "./card-contents/work";
 import Projects from "./card-contents/projects";

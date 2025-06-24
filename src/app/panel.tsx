@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useSlider } from "./context";
 import { usePanelPosition } from "./hooks/usePanelPosition";
 import About from "./card-contents/about";
 import Work from "./card-contents/work";
@@ -9,7 +8,7 @@ import Projects from "./card-contents/projects";
 import Contact from "./card-contents/contact";
 
 export default function Panel() {
-  const { currentSection, progress } = usePanelPosition();
+  const { progress } = usePanelPosition();
 
   // Calculate translation based on progress
   const translateX = `calc(100vw + ${-progress * 100}vw)`;

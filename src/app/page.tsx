@@ -6,7 +6,6 @@ import PanelMobile from "./panelMobile";
 import RangeSlider from "./slider";
 import { SliderProvider } from "./context";
 import Three from "./three";
-import useScroll from "./hooks/useScroll";
 import Navbar from "./navbar";
 
 export default function Home() {

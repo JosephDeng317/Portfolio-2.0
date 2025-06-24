@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { useSlider } from "./context";
 import { useEffect } from "react";
 
@@ -81,8 +81,6 @@ export default function Three() {
       renderer.setSize(width, height);
     });
 
-    scene.add(model);
-
     return () => {
       if (container) {
         container.removeChild(renderer.domElement);
@@ -100,8 +98,8 @@ export default function Three() {
         }`}
       ></div>
       <img
-        className={`hidden lg:block absolute bottom-[130] right-10 ${
-          inputValue <= 0.5 ? "opacity-100" : ":opacity-0"
+        className={`hidden lg:block absolute bottom-[130px] right-10 ${
+          inputValue <= 0.5 ? "opacity-100" : "opacity-0"
         }`}
         src="imadethisinblender2.png"
         alt="imadethisinblender"
