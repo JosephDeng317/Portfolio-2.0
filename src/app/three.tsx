@@ -11,12 +11,12 @@ export default function Three() {
     const container = document.getElementById("three-container");
     if (!container) return;
 
-    // Set renderer size to match container
-    const getSize = () => ({
-      width: container.clientWidth,
-      height: container.clientHeight,
-      // height: window.innerHeight,
-    });
+    // // Set renderer size to match container
+    // const getSize = () => ({
+    //   width: container.clientWidth,
+    //   height: container.clientHeight,
+    //   // height: window.innerHeight,
+    // });
 
     const width = 400;
     const height = 400;
