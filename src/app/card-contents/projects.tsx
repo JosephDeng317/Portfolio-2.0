@@ -11,7 +11,7 @@ export default function Projects() {
     },
     {
       title: "AI Recipe Generator",
-      techstack: "Next.js, Node.js, React.js, Three.js, OpenAI API, Bootstrap",
+      techstack: "Next.js, Node.js, React.js, Three.js, OpenAI API",
       description: "Website that utilizes the OpenAI API to generate recipes based on ingredients found in the fridge entered by the user.",
       github: "https://github.com/JosephDeng317/Recipe-Generator",
       demo: "https://nextjs-recipe-generator-zeta.vercel.app/"

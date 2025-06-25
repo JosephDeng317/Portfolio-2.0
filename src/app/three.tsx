@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { useSlider } from "./context";
 import { useEffect } from "react";
+import Image from "next/image"
 
 export default function Three() {
   useEffect(() => {
@@ -97,21 +98,21 @@ export default function Three() {
           inputValue <= 0.5 ? "opacity-100" : "opacity-100 lg:opacity-0"
         }`}
       ></div>
-      <img
+      <Image
         className={`hidden lg:block absolute bottom-[130px] right-10 ${
           inputValue <= 0.5 ? "opacity-100" : "opacity-0"
         }`}
-        src="imadethisinblender2.png"
+        src="/imadethisinblender2.png"
         alt="imadethisinblender"
-        width="300"
-        height="200"
+        width={300}
+        height={200}
       />
       <img
         className="block lg:hidden absolute bottom-0 right-10"
-        src="imadethisinblender2.png"
+        src="/imadethisinblender2.png"
         alt="imadethisinblender"
-        width="240"
-        height="160"
+        width={300}
+        height={200}
       />
     </div>
   );

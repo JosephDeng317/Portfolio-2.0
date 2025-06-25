@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-end pb-10 lg:pb-0 h-[40vh] lg:h-auto lg:row-span-2 lg:grid lg:grid-cols-4">
           <div className="flex pl-5 lg:pl-20 lg:col-span-2 justify-between">
-            <h1 className="text-7xl lg:text-8xl text-white">Joseph Deng</h1>
+            <h1 className="text-7xl xl:text-8xl text-white">Joseph Deng</h1>
           </div>
           <RangeSlider />
           <Socials />

@@ -22,9 +22,9 @@ export default function Panel() {
       }}
     >
       {/* Background layer with opacity */}
-      <div className="absolute inset-0 bg-black opacity-30 rounded-l-lg" />
+      <div className="absolute inset-0 bg-black opacity-30 rounded-lg" />
 
-      <div className="absolute inset-0 w-full h-full rounded-l-lg flex lg:grid lg:grid-cols-5 px-5 gap-5">
+      <div className="absolute inset-0 w-full h-full rounded-lg flex lg:grid lg:grid-cols-5 px-5 gap-5">
         <div className="col-start-1 w-[100vw]">
           <About />
         </div>

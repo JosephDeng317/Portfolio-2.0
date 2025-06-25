@@ -20,7 +20,7 @@ function RangeSlider() {
 
   return (
     <div className="hidden lg:flex justify-start pt-2">
-      <div>
+      <div className="w-full">
         <input
           id="default-range"
           type="range"
@@ -30,7 +30,7 @@ function RangeSlider() {
           min={0.5}
           max={5}
           step={0.01}
-          className="w-80 h-2 cursor-pointer accent-neutral-700 border-none bg-white"
+          className="w-2/3 h-2 cursor-pointer accent-neutral-700 border-none bg-white"
         ></input>
       </div>
     </div>
