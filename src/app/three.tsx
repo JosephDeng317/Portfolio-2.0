@@ -7,19 +7,18 @@ import { useEffect } from "react";
 import Image from "next/image"
 
 export default function Three() {
+  const container = document.getElementById("three-container");
+  if (!container) return;
+  // Set renderer size to match container
+  const getSize = () => ({
+    width: container.clientWidth,
+    height: container.clientHeight,
+    // height: window.innerHeight,
+  });
+
+  const { width, height } = getSize();
+
   useEffect(() => {
-    const container = document.getElementById("three-container");
-    if (!container) return;
-
-    // Set renderer size to match container
-    const getSize = () => ({
-      width: container.clientWidth,
-      height: container.clientHeight,
-      // height: window.innerHeight,
-    });
-
-    const { width, height } = getSize();
-
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
