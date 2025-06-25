@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${italiana.className} antialiased background-image-mobile lg:background-image`}>
+      <body className={`${italiana.className} antialiased background-image-mobile lg:background-image lg:overflow-y-hidden`}>
         {children}
       </body>
       <div className={`${alata.className} ${antic.className}`}></div>

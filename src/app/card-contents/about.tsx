@@ -29,7 +29,7 @@ export default function About() {
             </div>
             <div className="h-full">
               <Image
-                src="/ski.JPG"
+                src="/ski.jpg"
                 alt="skiing"
                 width={168}
                 height={0}
