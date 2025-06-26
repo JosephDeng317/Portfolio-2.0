@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 bg-gray/60 backdrop-blur-sm lg:bg-transparent h-[10vh] grid grid-cols-8 lg:row-span-1 lg:h-auto z-30">
+    <div className="sticky top-0 bg-gray/60 backdrop-blur-sm lg:backdrop-blur-none lg:bg-transparent h-[10vh] grid grid-cols-8 lg:row-span-1 lg:h-auto z-30">
       <div className="p-3 pl-5 lg:p-5 col-span-2">
         <button className="" onClick={() => setInputValue(0.5)}>
           <h1 className="text-5xl tight-spacing navbar-button transition-all duration-300 z-40">JD</h1>
