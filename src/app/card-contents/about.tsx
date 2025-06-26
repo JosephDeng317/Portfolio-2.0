@@ -7,7 +7,7 @@ export default function About() {
       <h1 className='text-6xl'>hello...</h1>
       <div className="flex flex-col lg:flex-row">
         <div className='mt-5 mb-5 lg:w-1/2 pr-10'>
-          <p className='opacity-90 text-lg antic'>
+          <p className='opacity-90 text-lg montserrat'>
             Nice to meet you! I&apos;m Joseph, a passionate fullstack developer with more than 6 years 
             of programming experience. I began my journey learning the fundementals of Python and Java in my 
             spare time, and have since branched out into the world of Web Development and Machine Learning. In my most recent internship,

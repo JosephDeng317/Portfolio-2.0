@@ -40,7 +40,7 @@ export default function Work() {
   return (
     <div className="text-gray-100 opacity-100 mt-5 mx-5 w-full pr-10">
       <h1 className='text-6xl mb-5 w-full'>my experiences...</h1>
-      <div className='flex flex-col lg:grid lg:grid-cols-3 gap-6 w-full'>
+      <div className='flex flex-col lg:grid lg:grid-cols-3 gap-6 w-full montserrat'>
         {experiences.map((exp, index) => (
           <div 
             key={index} 
@@ -49,11 +49,12 @@ export default function Work() {
                      transition-all duration-300 hover:scale-[1.02]'
           >
             <h2 className='text-xl font-semibold'>{exp.title} @ {exp.company}</h2>
-            <p className='text-md text-gray-400 mb-2 antic'>{exp.period}</p>
+            <p className='text-md text-gray-400 mb-2'>{exp.period}</p>
             <ul>
               {exp.points.map(point => (
                 <li key={point} className='text-gray-300 text-base leading-relaxed'>
-                  - {point}
+                  <span className="text-white text-lg">• </span>
+                  <span>{point}</span>
                 </li>
               ))}
             </ul>

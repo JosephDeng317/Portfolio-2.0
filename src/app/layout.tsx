@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Italiana, Alata, Antic_Didone } from "next/font/google";
+import { Italiana, Alata, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const italiana = Italiana({
@@ -12,9 +12,9 @@ const alata = Alata({
   weight: "400", // Specify the weight(s) needed (e.g., '400' for regular)
 });
 
-const antic = Antic_Didone({
+const montserrat = Montserrat({
   subsets: ["latin"], // Specify the subsets you need
-  weight: "400", // Specify the weight(s) needed (e.g., '400' for regular)
+  weight: "300", // Specify the weight(s) needed (e.g., '400' for regular)
 });
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
         <div className="fixed inset-0 background-image -z-10" />
         {children}
       </body>
-      <div className={`${alata.className} ${antic.className}`}></div>
+      <div className={`${alata.className} ${montserrat.className}`}></div>
     </html>
   );
 }

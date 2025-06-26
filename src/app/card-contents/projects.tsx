@@ -40,10 +40,10 @@ export default function Projects() {
             key={index} 
             className='flex flex-col bg-black/30 p-6 rounded-lg backdrop-blur-sm 
                      border border-gray-500/20 hover:border-gray-400/30 
-                     transition-all duration-300 hover:scale-[1.02]'
+                     transition-all duration-300 hover:scale-[1.02] montserrat'
           >
             <h2 className='text-2xl font-semibold mb-1'>{project.title}</h2>
-            <p className='text-md text-gray-400 mb-4 antic'>{project.techstack}</p>
+            <p className='text-md text-gray-400 mb-4'>{project.techstack}</p>
             <p className='text-gray-300 text-base leading-relaxed'>{project.description}</p>
             <div className='flex items-end mt-4 gap-4 flex-1'>
               <a 
