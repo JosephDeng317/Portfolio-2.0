@@ -11,16 +11,14 @@ export default function Three() {
     const container = document.getElementById("three-container");
     if (!container) return;
 
-    // // Set renderer size to match container
-    // const getSize = () => ({
-    //   width: container.clientWidth,
-    //   height: container.clientHeight,
-    //   // height: window.innerHeight,
-    // });
+    // Set renderer size to match container
+    const getSize = () => ({
+      width: container.clientWidth,
+      height: container.clientHeight,
+      // height: window.innerHeight,
+    });
 
-    const width = 400;
-    const height = 400;
-    // const { width, height } = getSize();
+    const { width, height } = getSize();
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 1000);
@@ -78,11 +76,11 @@ export default function Three() {
 
     animate();
 
-    window.addEventListener("resize", () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
-    });
+    // window.addEventListener("resize", () => {
+    //   camera.aspect = window.innerWidth / window.innerHeight;
+    //   camera.updateProjectionMatrix();
+    //   renderer.setSize(width, height);
+    // });
 
     return () => {
       if (container) {
