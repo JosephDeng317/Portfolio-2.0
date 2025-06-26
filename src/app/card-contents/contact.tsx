@@ -8,8 +8,6 @@ export default function Contact() {
         <p className='opacity-90 text-xl montserrat'>
           Whether you have an inquiry, want to collaborate on something, or just want to say hi, I&apos;m always willing to chat!
           <br /> <br /> <br />
-          Call  or text me at <a href="tel:647-335-9885" className="underline" >647-335-9885</a>
-          <br /> <br />
           Email me at <a href="mailto:josephdeng317@gmail.com" className="underline">josephdeng317@gmail.com</a>
         </p>
       </div>
