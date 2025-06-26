@@ -12,16 +12,16 @@ export default function PanelMobile() {
       {/* Background layer with opacity */}
       <div className="absolute inset-0 bg-black opacity-30 rounded-lg m-5" />
       <div className="h-full rounded-l-lg flex flex-col gap-5 relative z-10 m-5">
-        <div className="mt-5">
+        <div id="about" className="mt-5">
           <About />
         </div>
-        <div className="mt-5">
+        <div id="work" className="mt-5">
           <Work />
         </div>
-        <div className="mt-5">
+        <div id="projects" className="mt-5">
           <Projects />
         </div>
-        <div className="mt-5">
+        <div id="contact" className="mt-5">
           <Contact />
         </div>
       </div>

@@ -59,7 +59,11 @@ export default function Three() {
     let mouseX = 0;
     let mouseY = 0;
 
+    // Helper to check if screen is mobile
+    const isMobile = () => window.innerWidth < 1024;
+
     document.addEventListener("mousemove", (event) => {
+      if (isMobile()) return;
       mouseX = (event.clientX / window.innerWidth) * 2;
       mouseY = -(event.clientY / window.innerWidth) * 2;
 
@@ -71,6 +75,11 @@ export default function Three() {
 
     function animate() {
       requestAnimationFrame(animate);
+
+      if (model && isMobile()) {
+        model.rotation.y += 0.006;
+      }
+
       renderer.render(scene, camera);
     }
 
