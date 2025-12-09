@@ -35,6 +35,16 @@ export default function Work() {
         "Constructed an eye-catching home page featuring a controllable 3D model of the team’s microbiology project using Three.js, Tailwind, and React"
       ]
     },
+    // {
+    //     title: "Computer Vision Developer",
+    //     company: "UBC Subbots",
+    //     period: "Sep 2025 - Present",
+    //     points: 
+    //     [
+    //         "Developing a computer vision system for an autonomous underwater robot using ROS and Python to perform real-time object detection and tracking in challenging underwater environments.",
+    //         "Architected a robust synthetic dataset to combat overfitting using a simulated pool environment in Blender"
+    //     ]
+    // }
   ];
 
   return (
