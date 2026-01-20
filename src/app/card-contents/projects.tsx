@@ -3,6 +3,13 @@ import React from "react";
 export default function Projects() {
   const projects = [
     {
+      title: "Dance CV - NWHacks 2026 Winner",
+      techstack: "Mediapipe, Typescript, React, Gemeni API, Vite",
+      description: "Hackathon project that uses computer vision, AI, and voice dictation to help you improve your dance skills",
+      github: "https://github.com/douglasichen/DanceCV",
+      demo: "https://devpost.com/software/dance-cv"
+    },
+    {
       title: "Urbanize AI",
       techstack: "AWS Lambda, Bedrock, Expo, React, Python",
       description: "Hackathon project that promotes sustainable urban development by allowing users to easily visualize improvements with AI",

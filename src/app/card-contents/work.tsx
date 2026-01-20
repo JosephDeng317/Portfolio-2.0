@@ -8,10 +8,11 @@ export default function Work() {
       period: "Jan 2025 - Sep 2025",
       points: 
       [
-        "Utilized a cutting edge Image to 3D AI to generate high fidelity models of furniture, helping clients save up to $5000 per unit of shipping and scanning costs.",
+        "Adapted a YOLO detection head to work with a customized DINOv2 backbone to improve the model’s performance on industrial defect detection tasks by over 20%",
+        "Designed a novel classification algorithm that reduces error rates for text and symbol classification by over 150%using a custom trained mobilenet embedding model with an enhanced KNN algorithm",
+        "Engineered a cutting edge Image to 3D AI to generate high fidelity models of furniture, helping clients save up to $5000 per unit of shipping and scanning costs.",
         "Boosted YOLO object detection speed by 200% by conducting thorough benchmarks and implementing TensorRT.",
-        "Spearheaded the transformation of a full-stack web app into a distributable desktop app with Electron, rewrote and packaged python backend to use dynamic ports, and bootstrapped large modules to optimize app size",
-        "Designed, implemented, and deployed a product landing page from scratch using Docker containers to ensure migratability, and Cloudflare tunnels to link a local port to a live domain"
+        "Spearheaded the transformation of a full-stack web app into a distributable desktop app with Electron, rewrote and packaged python backend to use dynamic ports, and bootstrapped large modules to optimize app size"
       ]
     },
     {
@@ -21,17 +22,18 @@ export default function Work() {
       points: 
       [
         "Executed dynamic API calls to Contentful using Flask to add pagination, tagging, and a search function to the company’s production blog page.",
-        "Engaged in a multi-stage build and review process with a professional UX designer, and reskinned the website to use a responsive, mobile-first layout to improve user experience on small screen sizes"
+        "Conducted a multi-stage build and review process with a professional UX designer, and reskinned the website to use a responsive, mobile-first layout to improve user experience on small screen sizes"
       ]
     },
     {
-      title: "Web Developer",
+      title: "Website Team Lead",
       company: "UBC BIOMOD",
       period: "Oct 2024 - Present",
       points: 
       [
-        "Worked in a team of four to ship a responsive, competition-ready website in less than 3 weeks using Astro.js",
+        "Led a team of four to ship a responsive, competition-ready website in less than 3 weeks",
         "Finalized the production site by reviewing several pull requests , resolving code conflicts, and fixing critical bugs",
+        "Architected a well-structured code base and delegated tasks accordingly based on members strengths and interests",
         "Constructed an eye-catching home page featuring a controllable 3D model of the team’s microbiology project using Three.js, Tailwind, and React"
       ]
     },
